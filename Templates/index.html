@@ -1,0 +1,14 @@
+{% extends "./base.html" %}
+
+{% block title %} Index {% endblock %}
+
+{% load static %}
+
+{% block body %}
+<h1 style="margin-bottom: 100px;">Proyectos United S5</h1>
+<h1>Websy</h1>
+<p>Websy es un microemprendimiento individual que transforma ideas en páginas web únicas, diseñadas y programadas según el estilo que elijas.
+    Como emprendedor, me gusta trabajar de forma cercana y personalizada con cada cliente, escuchando sus ideas y dándoles vida en la web.
+    Ya sea un sitio simple o un diseño más elaborado, me aseguro de que tu proyecto se vea genial y funcione aún mejor.</p>
+    <img src="{% static 'img/websy-logo.jpeg' %}" alt="Logo de Websy" class="rounded mx-auto d-block" width="300">
+{% endblock %}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Página Proyecto{% endblock %}</title>
+
+  <!-- ✅ Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <!-- Bootstrap 5 CSS CORRECTO -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Navbar Bootstrap 5 -->
+<nav class="navbar navbar-expand-lg bg-body-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Página Proyecto</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('mostrarLenguajes') }}">Lenguajes</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="{{ url_for('contacto') }}">
+            Contactos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Contactos</a></li>
+          </ul>
+        </li>
+      </ul>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenedor principal con block body -->
+<div class="container py-3">
+  {% block body %}
+  {% endblock %}
+</div>
+
+<!-- Bootstrap 5 JS Bundle CORRECTO -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1Dh0O3U5wh9A1rZjW4x0Wj3z9pL+65jJo6t4y5jZoH+" crossorigin="anonymous"></script>
+<!-- Bootstrap 5 Bundle JS (incluye Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1Dh0O3U5wh9A1rZjW4x0Wj3z9pL+65jJo6t4y5jZoH+" crossorigin="anonymous"></script>
+
+<!-- ✅ Bootstrap 5.3.3 JS Bundle (con Popper incluido) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoYz1Dh0O3U5wh9A1rZjW4x0Wj3z9pL+65jJo6t4y5jZoH+" 
+        crossorigin="anonymous">
+      </script>
+      <script src=" {{ url_for('static', filename='js/base.js') }}"></script>
+</body>
+</html>

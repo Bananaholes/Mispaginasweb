@@ -1,28 +1,34 @@
-{% extends "./base.html" %}
+{% extends "base.html" %}
 
-{% block title %} Contactos {% endblock %}
+{% block title %}Contactos{% endblock %}
 
 {% block body %}
-<div class="row">
-    <div class="col-md-6 offset-md-3">
-        <h1>Contactos</h1>
-        <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-    </div>
-
-</div>
+<h2 class="mb-4">Contactos</h2>
+<table class="table table-bordered text-center align-middle">
+  <thead class="table-light">
+    <tr>
+      <th>Emprendimientos</th>
+      <th>Instagram</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Websy</td>
+      <td>
+        <a href="https://www.instagram.com/websy_empren" target="_blank">
+          <img src="{{ url_for('static', filename='img/instagram-logo.jpeg') }}" alt="Instagram" width="24" height="24">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Otro emprendimiento</td>
+      <td>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img src="{{ url_for('static', filename='img/instagram-logo.jpeg') }}" alt="Instagram" width="24" height="24">
+        </a>
+      </td>
+    </tr>
+    <!-- Agregá más contactos si querés -->
+  </tbody>
+</table>
 {% endblock %}

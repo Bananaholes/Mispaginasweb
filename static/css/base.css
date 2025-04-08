@@ -2,3 +2,74 @@ th,td{
     text-align: center;
     vertical-align: middle;
 }
+
+
+.izquierda {
+    left: 15%; /* ajustá según el margen izquierdo del contenido */
+}
+
+.derecha {
+    right: 15%; /* ajustá según el margen derecho del contenido */
+}
+
+
+/* Para que el contenido no se superponga con los bordes */
+.contenido {
+    padding: 2rem;
+    margin: 1rem;
+}
+
+/* Línea superior debajo del navbar */
+.linea-superior {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin-top: 0px; /* Ajustá esto al alto de tu navbar */
+    position: relative;
+    z-index: 1000;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+    
+
+.sidebar {
+    position: fixed;
+    top: 56px; /* justo debajo del navbar */
+    left: 0;
+    width: 300px;
+    height: calc(100vh - 56px);
+    background-color: #f8f9fa;
+    border-right: 1px solid black;
+    padding: 1rem;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .sidebar .nav-link {
+    color: #333;
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+  }
+  
+  .sidebar .nav-link:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+  }
+  
+  .contenido-principal {
+    margin-left: 200px; /* mismo valor que el ancho del sidebar */
+    padding: 2rem;
+  }
+  
+  .custom-move {
+    margin-left: 80px; /* Ajustá a tu gusto */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }

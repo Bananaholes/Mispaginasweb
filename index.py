@@ -9,10 +9,9 @@ def contacto():
     return render_template("contacto.html")
 
 
-@app.route("/lenguajes")
+@app.route("/servicios")
 def mostrarLenguajes():
-    mislenguajes=("PHP", "Python", "Java", "C#", "JavaScript", "Perl", "Ruby", "Rust")
-    return render_template("lenguajes.html", lenguajes=mislenguajes)
+    return render_template("servicios.html")
 
 
 @app.route('/')
